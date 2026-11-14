@@ -1,0 +1,212 @@
+/* ===== Estilos Generales y Header ===== */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f5f0;
+  color: #161616;
+}
+
+header {
+  background: #8B4513;
+  color: #FFFFFF;
+  padding: 1rem 2rem;
+}
+
+.header-contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.indicador-canasta {
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ===== Catálogo de Productos ===== */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.producto {
+  background: #FFFFFF;
+  border: 1px solid #E3DECF;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #8B4513;
+}
+
+.btn-anadir {
+  background: #8B4513;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.btn-anadir:hover {
+  background: #6f370f;
+  transform: translateY(-1px);
+}
+
+/* ===== 8. Mi pedido (Semana 4) ===== */
+#mi-pedido {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #FFFFFF;
+  border: 2px solid #E3DECF;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#lista-pedido {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#lista-pedido li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #E3DECF;
+}
+
+.acciones-item {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.btn-sumar, .btn-restar {
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: #E3DECF;
+  color: #161616;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-sumar:hover, .btn-restar:hover {
+  background: #d4cebe;
+}
+
+.btn-quitar {
+  width: auto;
+  background: #FFFFFF;
+  color: #8B4513;
+  border: 1px solid #CCC;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-quitar:hover {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.btn-vaciar {
+  margin-top: 1rem;
+  background: #D32F2F;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-vaciar:hover {
+  background: #b71c1c;
+}
+
+.sugerencia-box {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: #FFF8E1;
+  border: 1px dashed #FFA000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+#btn-sugerencia {
+  background: #FFA000;
+  color: #161616;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btn-sugerencia:hover {
+  background: #ff8f00;
+}
+
+.total {
+  font-size: 1.35rem;
+  color: #2e7d32;
+  margin-top: 1rem;
+}
+
+#titulo-pedido:focus, #pedido-vacio:focus {
+  outline: 3px solid #161616;
+  outline-offset: 2px;
+}
+
+/* Visible solo para lectores de pantalla */
+.solo-lector {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
